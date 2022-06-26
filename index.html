@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <title>Library</title>
+</head>
+
+<body>
+    <h1> Library </h1>
+    <button type="button" class="add-book"> Add a Book</button>
+
+    <!-- Book adding form-->
+    <div class="modal-form">
+        <div class="form">
+            <button class="close">x</button>
+            <form id="form">
+                <div class="input-box">
+                    <label for="title">Title</label>
+                    <input class="field" type="text" id="title" required placeholder="Book title">
+                </div>
+
+                <div class="input-box">
+                    <label for="author">Author</label>
+                    <input class="field" type="text" id="author" required placeholder="Author's name">
+                </div>
+
+                <div class="input-box">
+                    <label for="pages">No: of Pages</label>
+                    <input class="field" type="tel" id="pages" required placeholder="Pages">
+                </div>
+                <div class="input-box">
+                    <label for="readStatus">Read</label>
+                    <input type="checkbox" id="readStatus">
+                </div>
+                <button type="submit" id="btn-submit">Add</button>
+            </form>
+        </div>
+    </div>
+
+    <main class="container">
+        <div class="card">
+            <h3> Book Name </h3>
+            <p> Author Name </p>
+            <p> 100 pages</p>
+            <p> Already read</p>
+        </div>
+        <div class="card">
+            <h3> Book Name </h3>
+            <p> Author Name </p>
+            <p> 100 pages</p>
+            <p> Not read yet</p>
+        </div>
+    </main>
+
+</body>
+
+</html>
