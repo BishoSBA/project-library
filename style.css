@@ -4,26 +4,26 @@ body {
 	padding: var(--padding);
 	--padding: 20px;
 	justify-content: center;
+	background-color: #f8fafc;
 }
 
 main {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(200px, 23%));
-	grid-template-rows: repeat(auto-fit, 200px);
+	grid-template-rows: repeat(auto-fit, minmax(200px, auto-fit));
 	gap: 23px;
 	margin: var(--padding) 0px;
+	justify-content: center;
 }
 
-h1 {
-	text-align: center;
-}
-
+button,
 .add-book {
 	margin: auto;
 	padding: 10px;
-	border-radius: 20px;
-	color: aliceblue;
-	background-color: gray;
+	border-radius: 8px;
+	border: none;
+	background-color: #cbd5e1;
+	box-shadow: 3px 3px 5px #94a3b8;
 	font-size: 1rem;
 }
 
@@ -32,11 +32,16 @@ button:hover {
 }
 
 .card {
-	background-color: aliceblue;
+	display: flex;
+	flex-direction: column;
+	background-color: #cbd5e1;
 	padding: var(--padding);
-	box-shadow: 3px 3px 5px gray;
+	border: none;
+	border-radius: 8px;
+	box-shadow: 3px 3px 5px #94a3b8;
 }
 
+h1,
 h3,
 p {
 	text-align: center;
@@ -61,7 +66,7 @@ p {
 	display: flex;
 	align-items: center;
 	gap: 20px;
-	background-color: aliceblue;
+	background-color: #cbd5e1;
 	padding: var(--padding);
 }
 
@@ -75,7 +80,8 @@ label {
 	border-radius: 8px;
 	border: none;
 	width: 85%;
-	box-shadow: 0px 0px 5px 1px rgb(204, 200, 200);
+	background-color: #f8fafc;
+	box-shadow: 1px 1px 5px #94a3b8;
 }
 
 input[type="checkbox"] {
@@ -86,7 +92,7 @@ input[type="checkbox"] {
 .form {
 	display: grid;
 	align-items: center;
-	background-color: aliceblue;
+	background-color: #cbd5e1;
 	margin: auto;
 	width: max(60%, 500px);
 	padding: 10px;
@@ -100,11 +106,12 @@ form {
 }
 
 .close {
+	margin: 0px;
 	margin-left: auto;
-	border-radius: 30%;
+	border-radius: 10%;
+	padding: 0px 10px;
 	font-size: 1rem;
-	box-shadow: 1px 1px 3px gray;
-	background-color: aliceblue;
+	background-color: #cbd5e1;
 }
 
 .close:hover {
@@ -112,9 +119,14 @@ form {
 }
 
 #btn-submit {
-	padding: 10px 25px;
-	font-size: 1rem;
-	background-color: #e0e8ff;
-	border-radius: 10px;
-	margin: auto;
+	padding: 10px 30px;
+	background-color: #f8fafc;
+	box-shadow: 1px 1px 5px #94a3b8;
+}
+
+.card button {
+	background-color: #f8fafc;
+	box-shadow: 1px 1px 5px #94a3b8;
+	padding: 5px;
+	border-radius: 5px;
 }

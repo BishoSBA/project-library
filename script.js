@@ -35,7 +35,8 @@ function display(book) {
 	const removeBtn = document.createElement("button");
 	removeBtn.textContent = "remove book";
 	removeBtn.onclick = (e) => {
-		removeBook();
+		const card = e.target.parentNode;
+		removeBook(card.getAttribute("data-index"));
 	};
 	card.append(removeBtn);
 }
@@ -79,6 +80,7 @@ form.addEventListener("submit", (e) => {
 	addBookToLibrary(bookToAdd);
 
 	update();
+	form.reset();
 });
 
 const a = new Book("BookA", "Anwar", 100, "Already read");
@@ -94,6 +96,7 @@ addBookToLibrary(d);
 //show the modal on button click
 btn.onclick = () => {
 	modal.style.display = "block";
+	form.title.focus();
 };
 
 //close the btn
