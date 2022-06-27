@@ -1,10 +1,12 @@
 body {
 	display: flex;
 	flex-direction: column;
+	gap: 30px;
 	padding: var(--padding);
 	--padding: 20px;
 	justify-content: center;
-	background-color: #f8fafc;
+	background-color: #cbd5e1;
+	font-size: 1.5rem;
 }
 
 main {
@@ -22,9 +24,9 @@ button,
 	padding: 10px;
 	border-radius: 8px;
 	border: none;
-	background-color: #cbd5e1;
+	background-color: #f8fafc;
 	box-shadow: 3px 3px 5px #94a3b8;
-	font-size: 1rem;
+	font-size: 1.5rem;
 }
 
 button:hover {
@@ -34,7 +36,8 @@ button:hover {
 .card {
 	display: flex;
 	flex-direction: column;
-	background-color: #cbd5e1;
+	gap: 25px;
+	background-color: #f8fafc;
 	padding: var(--padding);
 	border: none;
 	border-radius: 8px;
@@ -45,6 +48,7 @@ h1,
 h3,
 p {
 	text-align: center;
+	margin: 0;
 }
 
 .modal-form {
@@ -59,7 +63,6 @@ p {
 	overflow: auto;
 	background-color: black;
 	background-color: rgb(25, 25, 25, 0.4);
-	font-size: 1.2rem;
 }
 
 .input-box {
@@ -70,23 +73,19 @@ p {
 	padding: var(--padding);
 }
 
-label {
-	width: 10%;
+form label {
+	width: 15%;
 	text-align: right;
 }
 
 .field {
-	height: 40px;
-	border-radius: 8px;
+	padding: 20px 10px;
+	border-radius: 10px;
 	border: none;
-	width: 85%;
+	width: 80%;
 	background-color: #f8fafc;
 	box-shadow: 1px 1px 5px #94a3b8;
-}
-
-input[type="checkbox"] {
-	transform: scale(3);
-	justify-self: center;
+	font-size: 1.5rem;
 }
 
 .form {
@@ -98,6 +97,10 @@ input[type="checkbox"] {
 	padding: 10px;
 	gap: 5px;
 	box-shadow: 0px 0px 5px black;
+}
+
+.form label {
+	margin: 0;
 }
 
 form {
@@ -125,8 +128,66 @@ form {
 }
 
 .card button {
-	background-color: #f8fafc;
+	background-color: #cbd5e1;
 	box-shadow: 1px 1px 5px #94a3b8;
-	padding: 5px;
-	border-radius: 5px;
+	padding: 10px;
+	border-radius: 15px;
+	font-size: 1rem;
 }
+
+/* The switch */
+.switch {
+	margin: auto;
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	transition: 0.4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	transition: 0.4s;
+}
+
+input:checked + .slider {
+	background-color: #2196f3;
+	box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+	transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+
+/* The switch CSS ends */

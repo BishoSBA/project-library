@@ -28,9 +28,21 @@ function display(book) {
 	numOfPages.textContent = `No of pages: ${book.numOfPages}`;
 	card.append(numOfPages);
 
-	const readStatus = document.createElement("p");
-	readStatus.textContent = `Status: ${book.readStatus}`;
-	card.append(readStatus);
+	const readLabel = document.createElement("label");
+	readLabel.classList.add("switch");
+
+	card.append(title, author, numOfPages, readLabel);
+
+	const readInput = document.createElement("input");
+	readInput.setAttribute("type", "checkbox");
+	const readSpan = document.createElement("span");
+	readSpan.classList.add("slider", "round");
+
+	readLabel.append(readInput, readSpan);
+
+	if (book.readStatus) {
+		readInput.click();
+	}
 
 	const removeBtn = document.createElement("button");
 	removeBtn.textContent = "remove book";
@@ -49,9 +61,7 @@ function addBookToLibrary(book) {
 }
 
 function removeBook(index) {
-	console.log(myLibrary[index]);
 	delete myLibrary[index];
-	console.log(myLibrary[index]);
 	update();
 }
 
@@ -74,12 +84,11 @@ form.addEventListener("submit", (e) => {
 	let title = form.title.value;
 	let author = form.author.value;
 	let numOfPages = form.pages.value;
-	let readStatus = form.readStatus.value;
+	let readStatus = form.readStatus.checked;
 
 	const bookToAdd = new Book(title, author, numOfPages, readStatus);
 	addBookToLibrary(bookToAdd);
 
-	update();
 	form.reset();
 });
 
