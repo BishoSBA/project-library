@@ -92,15 +92,9 @@ form.addEventListener("submit", (e) => {
 	form.reset();
 });
 
-const a = new Book("BookA", "Anwar", 100, "Already read");
-const b = new Book("BookB", "Bisho", 200, "Not read yet");
-const c = new Book("BookA", "Anwar", 100, "Already read");
-const d = new Book("BookB", "Bisho", 200, "Not read yet");
+const a = new Book("BookA", "Beshir Saeed", 420, "");
 
 addBookToLibrary(a);
-addBookToLibrary(b);
-addBookToLibrary(c);
-addBookToLibrary(d);
 
 //show the modal on button click
 btn.onclick = () => {
