@@ -1,6 +1,5 @@
 # project-library
 TOP project: [Library](https://bishosba.github.io/project-library/)
-(TOP stands for [The Odin Project](https:www.theodinproject) which is a self-paced fullstack course. I am going through it to supplement my CS university education with practical skills.)
 
 A simple library web app to display books added
 
@@ -25,3 +24,10 @@ A simple library web app to display books added
 
 👤 **BishoSBA**
 * GitHub: [BishoSBA](https://github.com/BishoSBA)
+
+### Other Examples:
+**Drawing Board:** https://github.com/bishosba/project-drawing-board/
+
+**Tic Tac Toe:** https://github.com/bishosba/project-tic-tac-toe/
+
+**Portfolio:** https://github.com/bishosba/portfolio/
